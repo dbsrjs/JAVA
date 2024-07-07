@@ -7,8 +7,6 @@ public class FindInt {
         for(int i = 0; i < data.length; i++) {
             if(data[i] == number) {
                 found = true;
-                //break;
-                return found;
             }
         }
 
