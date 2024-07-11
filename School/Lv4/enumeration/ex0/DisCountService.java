@@ -2,16 +2,18 @@ package enumeration.ex0;
 
 public class DisCountService {
     public int disCount(String lv, int price) {
+        int disCountPercent = 0;
+
         if(lv.equals("BASIC"))
-            return price*10 / 100;
+            disCountPercent = 10;
 
         else if(lv.equals("GOLD"))
-            return price * 20 / 100;
+            disCountPercent = 20;
 
         else if(lv.equals("DIAMOND"))
-            return price * 30 / 100;
+            disCountPercent = 30;
 
-        return 0;
+        return price*disCountPercent / 100;
     }
 }
 /*
