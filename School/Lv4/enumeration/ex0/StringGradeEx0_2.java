@@ -8,13 +8,12 @@ public class StringGradeEx0_2 {
         int price = 10000;
 
         //존재하지 않는 등급
-
         int vip = disCountService.disCount("VIP", price);
         System.out.println("vip = " + vip);
 
         //오타
-        int dimond = disCountService.disCount("DIAMONDD", price);
-        System.out.println("dimond = " + dimond);
+        int diamond = disCountService.disCount("DIAMONDD", price);
+        System.out.println("dimond = " + diamond);
 
         //소문자 입력
         int gold = disCountService.disCount("gold", price);
