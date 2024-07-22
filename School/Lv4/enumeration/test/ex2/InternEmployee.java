@@ -1,12 +1,12 @@
 package enumeration.test.ex2;
 
-public class ContractEmployee implements Employee {
+public class InternEmployee implements Employee {
     private double baseSalary;
     private EmployeeType employeeType;
 
-    public ContractEmployee(double baseSalary) {
+    public InternEmployee(double baseSalary) {
         this.baseSalary = baseSalary;
-        this.employeeType = EmployeeType.CONTRACT;
+        this.employeeType = EmployeeType.INTERN;
     }
 
     @Override
@@ -21,7 +21,7 @@ public class ContractEmployee implements Employee {
 
     @Override
     public String toString() {
-        return "ContractEmployee{" +
+        return "InternEmployee{" +
                 "baseSalary=" + baseSalary +
                 ", employeeType=" + employeeType +
                 '}';

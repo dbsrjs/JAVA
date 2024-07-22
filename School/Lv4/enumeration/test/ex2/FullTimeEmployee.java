@@ -1,17 +1,19 @@
 package enumeration.test.ex2;
 
-public class ContractEmployee implements Employee {
+public class FullTimeEmployee implements Employee {
     private double baseSalary;
+    private double bonus;
     private EmployeeType employeeType;
 
-    public ContractEmployee(double baseSalary) {
+    public FullTimeEmployee(double baseSalary, double bonus) {
         this.baseSalary = baseSalary;
-        this.employeeType = EmployeeType.CONTRACT;
+        this.bonus = bonus;
+        this.employeeType = EmployeeType.FULL_TIME;
     }
 
     @Override
     public double calculateSalary() {
-        return employeeType.adjustBaseSalary(baseSalary);
+        return employeeType.adjustBaseSalary(baseSalary) + bonus;
     }
 
     @Override
@@ -21,8 +23,9 @@ public class ContractEmployee implements Employee {
 
     @Override
     public String toString() {
-        return "ContractEmployee{" +
+        return "FullTimeEmployee{" +
                 "baseSalary=" + baseSalary +
+                ", bonus=" + bonus +
                 ", employeeType=" + employeeType +
                 '}';
     }
