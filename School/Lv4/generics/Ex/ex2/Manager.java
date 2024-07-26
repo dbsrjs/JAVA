@@ -1,6 +1,6 @@
 package generics.Ex.ex2;
 
-public class Manager <U, P> {
+public class Manager <U extends User, P extends Product> {
 
     public U user;
     public P product;
@@ -19,7 +19,7 @@ public class Manager <U, P> {
     }
 
     public void displayInfo() {
-        System.out.println("User: " + getUser());
-        System.out.println("Product: " + getProduct());
+        System.out.println("User: " + user.getName());
+        System.out.println("Product: " + product.getName() + ", Price: " + product.getPrice());
     }
 }
