@@ -26,6 +26,6 @@ public class Array01_v4_get {
 		System.out.println(list.get(1));
 		System.out.println(list.get(0));
 		
-		System.out.print("["+list.get(1)+", "+list.get(2)+"]");
+		System.out.print(list.subList(1, 3));
 	}
 }
